@@ -1,0 +1,198 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        #header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+        }
+
+        #header-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        #nav-bar {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-link:hover {
+            background: #3498db;
+        }
+
+        main {
+            margin-top: 80px;
+            padding: 2rem 5%;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .feature {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .feature h3 {
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .video-container {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        #video {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+        }
+
+        .form-section {
+            background: #ecf0f1;
+            padding: 3rem;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-section h2 {
+            margin-bottom: 2rem;
+        }
+
+        #form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        #email {
+            padding: 1rem;
+            border: 2px solid #bdc3c7;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        #email:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        #submit {
+            background: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #submit:hover {
+            background: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            #header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            #nav-bar {
+                margin-top: 1rem;
+            }
+
+            .nav-link {
+                margin: 0 0.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .features {
+                flex-direction: column;
+            }
+
+            main {
+                padding: 2rem 2%;
+            }
+
+            #video {
+                height: 250px;
+            }
+            
+            #pricing {
+                padding-bottom: 0;
+            }
+        }

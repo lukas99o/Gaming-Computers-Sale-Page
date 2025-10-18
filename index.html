@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Computer Sale Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <img src="gaming-pc-icon-vector.jpg" alt="Gaming Computer Logo" id="header-img">
+        
+        <nav id="nav-bar">
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#video-section" class="nav-link">Demo</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1>Ultimate Gaming Computers</h1>
+            <p>Experience next-level gaming with our high-performance computers designed for serious gamers</p>
+        </div>
+
+        <section id="features">
+            <h2>Why Choose Our Gaming Computers?</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>🚀 High Performance</h3>
+                    <p>Latest processors and graphics cards for smooth gaming at ultra settings</p>
+                </div>
+                <div class="feature">
+                    <h3>⚡ Lightning Fast</h3>
+                    <p>SSD storage and high-speed RAM for instant loading and multitasking</p>
+                </div>
+                <div class="feature">
+                    <h3>🎮 Gaming Optimized</h3>
+                    <p>Pre-configured and tested for the latest AAA games</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="video-section">
+            <h2>See It In Action</h2>
+            <div class="video-container">
+                <iframe id="video" 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="Gaming Computer Demo" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <h2>Get Exclusive Offers</h2>
+            <div class="form-section">
+                <h2>Stay Updated with Latest Deals</h2>
+                <p>Subscribe to our newsletter and get exclusive discounts on gaming computers!</p>
+                
+                <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Enter your email address" 
+                        required
+                    >
+                    <input type="submit" id="submit" value="Get Exclusive Deals">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    const headerHeight = document.getElementById('header').offsetHeight;
+                    const targetPosition = targetSection.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        function handleLogoVisibility() {
+            const headerImg = document.getElementById('header-img');
+            const screenWidth = window.innerWidth;
+            
+            if (screenWidth <= 768) {
+                headerImg.style.display = 'none';
+            } else {
+                headerImg.style.display = 'block';
+            }
+        }
+
+        handleLogoVisibility();
+
+        window.addEventListener('resize', handleLogoVisibility);
+    </script>
+</body>
+</html>
